@@ -28,7 +28,10 @@ class Game {
         } else {
           this.addMouseEvents();
         }
-       
+        this.playerOnePiece = document.querySelector(".piece-list-1");
+        this.playerTwoPiece = document.querySelector(".piece-list-2");
+        this.p1Container = document.querySelector(".image-container-1");
+        this.p2Container = document.querySelector(".image-container-2");
     }
 
     makeBoard() {
@@ -243,7 +246,7 @@ class Game {
     for (let box in tdArray) {
         tdArray[box].classList.add("hover");
     }
-  } 
+  }
 }
 class Player {
     constructor(piece, name) {
@@ -262,6 +265,38 @@ const playerOnePiece = document.querySelector(".piece-list-1");
 const playerTwoPiece = document.querySelector(".piece-list-2");
 let p1Container = document.querySelector(".image-container-1");
 let p2Container = document.querySelector(".image-container-2");
+/**
+ * 
+ * function below is to make the icons change when switching player pieces
+ * 
+ */
+function setSelectListImages() {
+  let p1ListCount = 0;
+  let p2ListCount = 0;
+  playerTwoPiece.addEventListener("change", (e) => {
+    if (p2ListCount === 0) {
+      p2Container.style.backgroundImage = 'url("Images/greenDie.png';
+      p2ListCount++;
+    }
+    else {
+      p2Container.style.backgroundImage = 'url("Images/purpleDie.png';
+      p2ListCount--;
+    }
+  });
+  playerOnePiece.addEventListener("change", (e) => {
+    if (p1ListCount === 0) {
+      p1Container.style.backgroundImage = 'url("Images/RedPiece.png")';
+      p1ListCount++;
+    }
+    else {
+      p1Container.style.backgroundImage = 'url("Images/YellowPiece.png")';
+      p1ListCount--;
+    }
+  });
+}
+setSelectListImages();
+
+
 document.getElementById('start-game').addEventListener('click', () => {
     p1Container.style.backgroundImage = playerOnePiece.options[playerOnePiece.selectedIndex].value;
     p2Container.style.backgroundImage = playerTwoPiece.options[playerTwoPiece.selectedIndex].value;
