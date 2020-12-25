@@ -7,6 +7,17 @@ body {
 li {
   margin-top:5px;
 }
+#lists {
+  display:flex;
+  justify-content: space-between;
+}
+#lists > div {
+  margin:10px;
+}
+.start-options {
+  display:flex;
+  justify-content: space-between;
+}
 .image-container-1 {
   background-image: url("Images/YellowPiece.png");
   background-size: cover;
@@ -23,11 +34,16 @@ li {
   width:100px;
   height:50px;
   margin-top:50px;
+  margin-right:20px;
+  position:absolute;
+  right:1000px;
 }
 .game-setup {
   width:100%;
   display:flex;
   justify-content: space-around;
+  justify-items: baseline;
+  flex-direction: row;
   margin-bottom:50px;
 }
 .piece-list-1 {
@@ -108,6 +124,8 @@ li {
   margin-top:50px;
   position: relative;
   display: inline-block;
+  position: absolute;
+  right:10px;
 }
 
 .dropdown-content {
@@ -162,7 +180,61 @@ span {
   }
 }
 
-@media (max-width:900px) {
+@media (max-width:1800px) {
+  body {
+   margin-left:5px;
+  }
+  .top-bar {
+    margin-bottom:5px;
+  }
+  #restart-arrow {
+    height:50px;
+  }
+  #restart-arrow:hover {
+    height:50px;
+  }
+  .image-container-1 {
+    background-image: url("Images/YellowPiece.png");
+    background-size: cover;
+    height:50px;
+    width:50px;
+  }
+  .image-container-2 {
+    background-image: url("Images/purpleDie.png");
+    background-size: cover;
+    height:50px;
+    width:50px;
+  }
+  .dropdown {
+    margin-top:50px;
+    position: relative;
+    display: inline-block;
+    margin-right:0px;
+  }
+  .game-setup {
+    display:flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: column;
+
+  }
+  #lists {
+    display:flex;
+    justify-content: space-around;
+  }
+  .start-options {
+    display:flex;
+    justify-content: center;
+  }
+  #start-game {
+    width:100px;
+    height:50px;
+    margin-top:50px;
+    margin-right:20px;
+    position: relative;
+    right:0px;
+  }
+}@media (max-width:900px) {
   body {
    margin-left:5px;
   }
@@ -208,5 +280,17 @@ span {
   .start-options {
     display:flex;
     justify-content: space-around;
+  }
+  #start-game {
+    width:100px;
+    height:30px;
+    margin-top:50px;
+    margin-right:20px;
+    position: relative;
+    right:0px;
+  }
+  #board td {
+    width:30px;
+    height:30px;
   }
 }
