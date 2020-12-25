@@ -1,5 +1,3 @@
-
-
 class Game {
     constructor(p1,p2,HEIGHT = 6, WIDTH = 7) {
         this.p1 = p1;
@@ -252,6 +250,12 @@ class Player {
         this.piece = piece;
         this.name = name;
       }
+}
+
+class ComputerPlayer {
+  constructor(piece) {
+    
+  }
 }
 
 const playerOnePiece = document.querySelector(".piece-list-1");

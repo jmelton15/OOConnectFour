@@ -164,7 +164,7 @@ span {
 
 @media (max-width:900px) {
   body {
-   margin-left:5px; 
+   margin-left:5px;
   }
   .top-bar {
     margin-bottom:5px;
@@ -173,18 +173,40 @@ span {
     height:20px;
   }
   #restart-arrow:hover {
-    height:30px;
+    height:20px;
   }
-  .image-container {
+  .image-container-1 {
     background-image: url("Images/YellowPiece.png");
     background-size: cover;
-    height:50px;
-    width:50px;
+    height:30px;
+    width:30px;
+  }
+  .image-container-2 {
+    background-image: url("Images/purpleDie.png");
+    background-size: cover;
+    height:30px;
+    width:30px;
   }
   .dropdown {
     margin-top:50px;
     position: relative;
     display: inline-block;
-    
+    font-size: small;
+    margin-right:0px;
+  }
+  .game-setup {
+    display:flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: column;
+
+  }
+  #lists {
+    display:flex;
+    justify-content: space-around;
+  }
+  .start-options {
+    display:flex;
+    justify-content: space-around;
   }
 }
